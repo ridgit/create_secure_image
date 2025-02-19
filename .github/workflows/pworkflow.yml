@@ -9,11 +9,12 @@ jobs:
   gitguardian-scan:
     name: GitGuardian Secret Detection
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Nécessaire pour l'analyse historique
+          fetch-depth: 0  # Nécessaire pour l’analyse historique
 
       - name: Run GitGuardian Scan
         uses: GitGuardian/ggshield-action@v2
@@ -21,12 +22,12 @@ jobs:
           GITGUARDIAN_API_KEY: ${{ secrets.GITGUARDIAN_API_KEY }}
         with:
           paths: "./functions"  # Analyse spécifique du répertoire
-          exit-zero: false  # Échec si des secrets sont détectés
 
   bandit-scan:
     name: Bandit Security Analysis
     runs-on: ubuntu-latest
     needs: gitguardian-scan  # Dépend de GitGuardian
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -42,14 +43,14 @@ jobs:
       - name: Run Bandit Analysis
         run: |
           bandit -r functions/ -ll -iii \
-          -f custom \
-          --msg-template "{line}: {severity}: {test_id}: {msg}" \
-          --exit-zero  # Retire --exit-zero pour bloquer sur tout finding
+            -f custom \
+            --msg-template "{line}: {severity}: {test_id}: {msg}"
 
   gitleaks-scan:
     name: Gitleaks Secret Detection
     runs-on: ubuntu-latest
     needs: bandit-scan  # Dépend de Bandit
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -57,9 +58,8 @@ jobs:
       - name: Run Gitleaks
         uses: gitleaks/gitleaks-action@v2
         with:
-          args: "--redact --source=./functions"
+          args: "--redact --source=./functions --exit-code 1"
 
-  # Build et Scan de l'image Docker
   build-and-scan:
     name: Build and Scan Docker Image
     runs-on: ubuntu-latest
