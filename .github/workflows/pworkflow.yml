@@ -78,7 +78,7 @@ jobs:
 
       - name: Build Docker image for ${{ matrix.function }}
         run: |
-          docker build -t ${{ secrets.MY_CONTAINER }}/${{ matrix.function }}:latest ./functions/${{ matrix.function }}
+          docker build -t ${{ secrets.MY_CONTAINER }}/${{ matrix.function }}:latest .
 
       - name: Scan Docker image with Trivy
         uses: aquasecurity/trivy-action@master
