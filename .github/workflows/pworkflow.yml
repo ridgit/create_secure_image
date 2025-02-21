@@ -77,6 +77,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image for ${{ matrix.function }}
+        working-directory: ./functions/${{ matrix.function }}
         run: |
           docker build -t ${{ secrets.MY_CONTAINER }}/${{ matrix.function }}:latest .
 
