@@ -22,7 +22,7 @@ jobs:
         run: |
           functions=$(ls -d functions/*/ | sed 's|functions/||g' | jq -R -s -c 'split("\n")[:-1]')
           echo "Fonctions trouvées : $functions"
-          echo "::set-output name=functions::$functions"
+          echo "functions=$functions" >> "$GITHUB_OUTPUT"
 
   # 🔹 Job unique qui exécute tous les contrôles de sécurité et la build pour chaque fonction
   process-function:
