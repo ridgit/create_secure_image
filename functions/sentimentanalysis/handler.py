@@ -1,6 +1,7 @@
 import sys
 import json
 from textblob import TextBlob
+import request
 
 def get_stdin():
     buf = ""
