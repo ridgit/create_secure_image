@@ -43,7 +43,7 @@ jobs:
         env:
           GITGUARDIAN_API_KEY: ${{ secrets.GITGUARDIAN_API_KEY }}
         with:
-          args: "secret scan --path functions/${{ matrix.function }}"
+          args: "ggshield secret scan --path functions/${{ matrix.function }}"
 
       # 🔹 Étape 2 : Analyse de sécurité avec Bandit
       - name: Bandit Security Analysis
