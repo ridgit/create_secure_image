@@ -61,9 +61,10 @@ jobs:
             --msg-template "{line}: {severity}: {test_id}: {msg}"
 
       # 🔹 Étape 3 : Détection des secrets avec Gitleaks
-      - name: Run Gitleaks
-        run: |
-          gitleaks detect --source=functions/${{ matrix.function }} --redact --exit-code 1
+      - name: Gitleaks Secret Detection
+        uses: gitleaks/gitleaks-action@v2
+        with:
+          args: "--redact --source=functions/${{ matrix.function }} --exit-code 1"
 
       # 🔹 Étape 4 : Build et Scan de l'image Docker
       - name: Set up Docker Buildx
