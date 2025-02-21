@@ -79,12 +79,13 @@ jobs:
       - name: Build Docker image for ${{ matrix.function }}
         working-directory: ./functions/${{ matrix.function }}
         run: |
-          docker build -t ${{ secrets.MY_CONTAINER }}/$(basename ${{ matrix.function }}):latest .
+          FUNCTION_NAME=$(basename ${{ matrix.function }})
+          docker build -t ${{ secrets.MY_CONTAINER }}/$FUNCTION_NAME:latest .
 
       - name: Scan Docker image with Trivy
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: ${{ secrets.MY_CONTAINER }}/$(basename ${{ matrix.function }}):latest
+          image-ref: ${{ secrets.MY_CONTAINER }}/$FUNCTION_NAME:latest
           ignore-unfixed: true
           severity: HIGH,CRITICAL
           exit-code: 1
@@ -92,4 +93,4 @@ jobs:
       - name: Push Docker image
         if: success()
         run: |
-          docker push ${{ secrets.MY_CONTAINER }}/$(basename ${{ matrix.function }}):latest
+          docker push ${{ secrets.MY_CONTAINER }}/$FUNCTION_NAME:latest
