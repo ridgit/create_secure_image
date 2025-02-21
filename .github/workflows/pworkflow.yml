@@ -79,7 +79,7 @@ jobs:
       - name: Build Docker image for ${{ matrix.function }}
         working-directory: ./functions/${{ matrix.function }}
         run: |
-          FUNCTION_NAME=$(basename ${{ matrix.function }})
+          export FUNCTION_NAME=$(basename ${{ matrix.function }})
           docker build -t ${{ secrets.MY_CONTAINER }}/$FUNCTION_NAME:latest .
 
       - name: Scan Docker image with Trivy
