@@ -75,19 +75,19 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Set FUNCTION_NAME
+        run: echo "FUNCTION_NAME=$(basename '${{ matrix.function }}')" >> $GITHUB_ENV
 
       - name: Build Docker image for ${{ matrix.function }}
         working-directory: ./functions/${{ matrix.function }}
         run: |
           FUNCTION_NAME=$(basename ${{ matrix.function }})
           docker build -t ${{ secrets.MY_CONTAINER }}/$FUNCTION_NAME:latest .
-          env:
-            FUNCTION_NAME: ${{ matrix.function }}
 
       - name: Scan Docker image with Trivy
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: ${{ secrets.MY_CONTAINER }}/FUNCTION_NAME:latest
+          image-ref: ${{ secrets.MY_CONTAINER }}/$FUNCTION_NAME:latest
           ignore-unfixed: true
           severity: HIGH,CRITICAL
           exit-code: 1
@@ -95,4 +95,4 @@ jobs:
       - name: Push Docker image
         if: success()
         run: |
-          docker push ${{ secrets.MY_CONTAINER }}/FUNCTION_NAME:latest
+          docker push ${{ secrets.MY_CONTAINER }}/$FUNCTION_NAME:latest
