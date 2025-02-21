@@ -22,7 +22,7 @@ jobs:
         run: |
           functions=$(ls -d functions/*/ | sed 's|functions/||g' | jq -R -s -c 'split("\n")[:-1]')
           echo "Fonctions trouvées : $functions"
-          echo "functions=$functions" >> $GITHUB_ENV
+          echo "::set-output name=functions::$functions"
 
   # 🔹 Job unique qui exécute tous les contrôles de sécurité et la build pour chaque fonction
   process-function:
@@ -31,7 +31,7 @@ jobs:
     needs: list-functions
     strategy:
       matrix:
-        function: ${{ fromJson(env.functions) }}  # Utilise la liste de fonctions générée
+        function: ${{ fromJson(needs.list-functions.outputs.functions) }}  # Utilise la liste de fonctions générée
 
     steps:
       - name: Checkout code
