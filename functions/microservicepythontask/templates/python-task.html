@@ -1,0 +1,112 @@
+<!DOCTYPE html5>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.8/ace.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/python-task.css') }}">
+<title>Code</title>
+</head>
+<body>
+<form id="task_form">
+<div>
+{% if datafile %}
+<input id="datafile" name="datafile" type="text" value="{{ datafile }}">
+{% else %}
+<input id="datafile" name="datafile" type="text" value="yourData.json">
+{% endif %}
+{% if codefile %}
+<input id="codefile" name="codefile" type="text" value="{{ codefile }}">
+{% else %}
+<input id="codefile" name="codefile" type="text" value="yourCode.py">
+{% endif %}
+</div>
+<!-- Data editor and according textarea -->
+<div>
+<textarea name="data" id="data"></textarea>
+{% if data %}
+<div id="dataeditor">{{ data }}</div>
+{% else %}
+<div id="dataeditor">{
+    "message": "Hello World!"
+}
+</div>
+{% endif %}
+</div>
+<!-- Code editor and according textarea -->
+<div>
+<textarea name="code" id="code"></textarea>
+{% if code %}
+<div id="codeeditor">{{ code }}</div>
+{% else %}
+<div id="codeeditor"># Your python 3 code goes here
+import json
+
+def show_message(json_file):
+    with open(json_file, 'r') as f:
+        content = json.load(f)
+
+    return content['message']
+
+if __name__ == "__main__":
+    print(show_message("yourData.json"))
+</div>
+{% endif %}
+</div>
+<input id="submit" value="Submit" />
+</form>
+<div id="console">
+<pre id="output">
+{{ output }}
+</pre>
+</div>
+<script>
+
+    // Data editor handling
+    var d_textarea = $('#data').hide();
+
+    var dataeditor = ace.edit("dataeditor");
+    dataeditor.setTheme("ace/theme/monokai");
+    dataeditor.session.setMode("ace/mode/json");
+    dataeditor.setFontSize(16);
+
+    // Code editor handling
+    var c_textarea = $('#code').hide();
+
+    var codeeditor = ace.edit("codeeditor");
+    codeeditor.setTheme("ace/theme/monokai");
+    codeeditor.session.setMode("ace/mode/python");
+    codeeditor.setFontSize(16);
+
+    // Submit button
+    $(document).ready(function() {
+        $("#submit").on("click", function() {
+
+            d_textarea.val(dataeditor.getSession().getValue());
+            c_textarea.val(codeeditor.getSession().getValue());
+
+            $.ajax({
+                url: "http://localhost:50000",
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                data: JSON.stringify({
+                    datafile: $("#datafile").val(),
+                    data: $("#data").val(),
+                    codefile: $("#codefile").val(),
+                    code: $("#code").val(),
+                }),
+                success: function(response) {
+                    console.log("Success:")
+                    console.log(response)
+                    $("#output").text(response.output);
+                },
+                error: function(error) {
+                    console.log("Error:")
+                    console.log(error);
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
