@@ -1,0 +1,62 @@
+#datafile {
+    margin: 0;
+    position: absolute;
+    margin: 0;
+    left: 2%;
+    width: 45%;
+}
+#dataeditor {
+    margin: 0;
+    position: absolute;
+    top: 8%;
+    bottom: 30%;
+    left: 2%;
+    right: 0;
+    width: 45%;
+}
+#codefile {
+    margin: 0;
+    position: absolute;
+    left: 52%;
+    width: 45%;
+}
+#codeeditor {
+    margin: 0;
+    position: absolute;
+    top: 8%;
+    bottom: 30%;
+    left: 52%;
+    right: 0;
+    width: 45%;
+}
+#submit {
+    position: absolute;
+    bottom: 24%;
+    left: 2%;
+    cursor: pointer;
+    background-color: #E3D872;
+    border: none;
+    padding: 10px 32px;
+    font-size: 16px;
+    width: 125px;
+}
+#console {
+    background: #272822;
+    color: #F8F8F2;
+    padding: 0px;
+    position: absolute;
+    top: 78%;
+    left: 2%;
+    right: 0;
+    width: 95%;
+    min-height: 20%;
+}
+#output {
+    padding: 10px;
+    font-size: 16px;
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
