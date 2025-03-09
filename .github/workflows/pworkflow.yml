@@ -21,7 +21,7 @@ jobs:
         env:
           GITGUARDIAN_API_KEY: ${{ secrets.GITGUARDIAN_API_KEY }}
         with:
-          paths: "./functions/llmcurrencyconverter/"  # ✅ Chemin exact
+          paths: "./functions/microservicepythontask/"  # ✅ Chemin exact
 
   bandit-scan:
     name: Bandit Security Analysis
@@ -43,7 +43,7 @@ jobs:
       - name: Run Bandit Analysis
         run: |
           # Correction du chemin (ajout du 'r' manquant)
-          bandit -r functions/llmcurrencyconverter/ -ll -iii \
+          bandit -r functions/microservicepythontask/ -ll -iii \
             -f custom \
             --msg-template "{line}: {severity}: {test_id}: {msg}"
 
@@ -59,7 +59,7 @@ jobs:
       - name: Run Gitleaks
         uses: gitleaks/gitleaks-action@v2
         with:
-          args: "--redact --source=./functions/llmcurrencyconverter/ --no-git --exit-code 1"  # ✅ Chemin exact
+          args: "--redact --source=./functions/microservicepythontask/ --no-git --exit-code 1"  # ✅ Chemin exact
           
 
   build-and-scan:
@@ -81,7 +81,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        working-directory: ./functions/llmcurrencyconverter  # ✅ Isolation du contexte
+        working-directory: ./functions/microservicepythontask  # ✅ Isolation du contexte
         run: |
           docker build -t ${{ secrets.MY_CONTAINER }}/secure-image:latest .
 
