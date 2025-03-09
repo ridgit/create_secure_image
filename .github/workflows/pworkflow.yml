@@ -79,7 +79,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        working-directory: ./functions/castservice
+        working-directory: ./functions/llmchatbot
         run: |
           docker build -t ${{ secrets.MY_CONTAINER }}/secure-image:latest .
 
