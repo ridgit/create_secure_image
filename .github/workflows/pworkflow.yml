@@ -79,7 +79,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        working-directory: ./functions/c8ymicroservicepython
+        working-directory: ./functions/castservice
         run: |
           docker build -t ${{ secrets.MY_CONTAINER }}/secure-image:latest .
 
