@@ -42,7 +42,7 @@ jobs:
 
       - name: Run Bandit Analysis
         run: |
-          bandit -r functions/llmcurrencyconverter/ -ll -iii \
+          bandit -r functions/llmidgenerator/ -ll -iii \
             -f custom \
             --msg-template "{line}: {severity}: {test_id}: {msg}"
 
@@ -79,7 +79,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        working-directory: ./functions/llmcurrencyconverter
+        working-directory: ./functions/llmidgenerator
         run: |
           docker build -t ${{ secrets.MY_CONTAINER }}/secure-image:latest .
 
