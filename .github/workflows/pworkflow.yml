@@ -14,19 +14,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Nécessaire pour l’analyse historique
+          fetch-depth: 0
 
       - name: Run GitGuardian Scan
         uses: GitGuardian/ggshield-action@v1
         env:
           GITGUARDIAN_API_KEY: ${{ secrets.GITGUARDIAN_API_KEY }}
         with:
-          paths: "./functions/llmcurrencyconverter"  # Analyse spécifique du répertoire
+          paths: "./functions/llmcurrencyconverter"  # ✅ Chemin exact
 
   bandit-scan:
     name: Bandit Security Analysis
     runs-on: ubuntu-latest
-    needs: gitguardian-scan  # Dépend de GitGuardian
+    needs: gitguardian-scan
 
     steps:
       - name: Checkout code
@@ -42,6 +42,7 @@ jobs:
 
       - name: Run Bandit Analysis
         run: |
+          # Correction du chemin (ajout du 'r' manquant)
           bandit -r functions/llmcurrencyconverter/ -ll -iii \
             -f custom \
             --msg-template "{line}: {severity}: {test_id}: {msg}"
@@ -49,7 +50,7 @@ jobs:
   gitleaks-scan:
     name: Gitleaks Secret Detection
     runs-on: ubuntu-latest
-    needs: bandit-scan  # Dépend de Bandit
+    needs: bandit-scan
 
     steps:
       - name: Checkout code
@@ -58,16 +59,16 @@ jobs:
       - name: Run Gitleaks
         uses: gitleaks/gitleaks-action@v2
         with:
-          args: "--redact --source=./functions/llmcurrencyconverter --exit-code 1"
+          args: "--redact --source=./functions/llmcurrencyconverter --exit-code 1"  # ✅ Chemin exact
 
   build-and-scan:
     name: Build and Scan Docker Image
     runs-on: ubuntu-latest
-    needs: gitleaks-scan  # Dépend du scan Gitleaks (doit réussir)
+    needs: gitleaks-scan
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4  # Récupère le code source
+        uses: actions/checkout@v4
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -79,7 +80,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        working-directory: ./functions/llmcurrencyconverter
+        working-directory: ./functions/llmcurrencyconverter  # ✅ Isolation du contexte
         run: |
           docker build -t ${{ secrets.MY_CONTAINER }}/secure-image:latest .
 
@@ -92,6 +93,6 @@ jobs:
           exit-code: 1
 
       - name: Push Docker image
-        if: success()  # Exécute seulement si Trivy ne détecte pas d'erreurs bloquantes
+        if: success()
         run: |
           docker push ${{ secrets.MY_CONTAINER }}/secure-image:latest
