@@ -21,7 +21,7 @@ jobs:
         env:
           GITGUARDIAN_API_KEY: ${{ secrets.GITGUARDIAN_API_KEY }}
         with:
-          paths: "./functions/llmcurrencyconverter"  # ✅ Chemin exact
+          paths: "./functions/llmcurrencyconverter/"  # ✅ Chemin exact
 
   bandit-scan:
     name: Bandit Security Analysis
@@ -59,7 +59,7 @@ jobs:
       - name: Run Gitleaks
         uses: gitleaks/gitleaks-action@v2
         with:
-          args: "--redact --source=./functions/llmcurrencyconverter --exit-code 1 --no-git  # Ignore l'historique Git, scanne uniquement les fichiers actuels"  # ✅ Chemin exact
+          args: "--redact --source=./functions/llmcurrencyconverter/ --no-git --exit-code 1"  # ✅ Chemin exact
           
 
   build-and-scan:
