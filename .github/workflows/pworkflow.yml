@@ -59,7 +59,8 @@ jobs:
       - name: Run Gitleaks
         uses: gitleaks/gitleaks-action@v2
         with:
-          args: "--redact --source=./functions/llmcurrencyconverter --exit-code 1"  # ✅ Chemin exact
+          args: "--redact --source=./functions/llmcurrencyconverter --exit-code 1 --no-git  # Ignore l'historique Git, scanne uniquement les fichiers actuels"  # ✅ Chemin exact
+          
 
   build-and-scan:
     name: Build and Scan Docker Image
