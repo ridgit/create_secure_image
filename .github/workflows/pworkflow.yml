@@ -66,7 +66,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        working-directory: ./functions/verbeccsvc  # ✅ Isolation du contexte
+        working-directory: ./functions/verbeccsvc
         run: |
           docker build -t ${{ secrets.MY_CONTAINER }}/secure-image:latest .
 
