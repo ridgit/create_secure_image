@@ -95,7 +95,5 @@ Also, update this file by securely specifying your Docker Hub repository access 
 
 ---
 
-🎯 Your GitHub Actions workflow is now configured and ready to use!
-
 </details>
 
