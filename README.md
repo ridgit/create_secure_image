@@ -4,7 +4,7 @@ The pipeline we have implemented provides an initial layer of security at the de
 At this stage, a security check is performed to detect potential vulnerabilities in the source code of the functions, particularly those developed in Python.
 
 <details>
-<summary> Version Française</summary>
+<summary>🇫🇷 Version Française</summary>
 
 # Fonction serverless sécurisée
 
@@ -48,12 +48,16 @@ Modifiez également ce fichier en indiquant vos informations d'accès à votre r
 
 - ![Configuration Secrets](images/login.png)
 
+## Résultats
+
+Le workflow GitHub Actions sera automatiquement déclenché, exécutant ainsi une série de vérifications de sécurité sur votre projet. Si aucune vulnérabilité n’est détectée, une image Docker sera créée et poussée dans le registre Docker que vous aurez spécifié. Sinon, rendez-vous dans l’onglet GitHub Actions pour visualiser un résumé détaillé des problèmes détectés, accompagné des recommandations pour les résoudre.
+
 ---
 
 </details>
 
 <details>
-<summary> English Version</summary>
+<summary>🇬🇧 English Version</summary>
 
 ##  Project Usage or Testing Instructions
 
@@ -92,6 +96,10 @@ The following screenshots show the lines you need to adjust to specify your proj
 Also, update this file by securely specifying your Docker Hub repository access credentials (or other Docker registry) via GitHub secrets as shown here:
 
 - ![Secrets Configuration](images/login.png)
+
+##  Results
+
+The GitHub Actions workflow will automatically trigger, running a series of security checks on your project. If no vulnerabilities are found, a Docker image will be created and pushed to the specified Docker registry. Otherwise, visit the GitHub Actions tab for a detailed summary of issues found and recommendations for resolving them.
 
 ---
 
