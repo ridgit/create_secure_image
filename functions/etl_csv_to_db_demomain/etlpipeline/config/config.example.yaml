@@ -1,0 +1,15 @@
+database:
+  host: your_host
+  port: your_port
+  user: your_username
+  password: your_password
+  database: your_database
+  table: your_table
+  pool_size: 2
+  timeout: 30
+
+paths:
+  data_dir: "ETLpipeline/data"
+
+transform:
+  salary_multiplier: 1.1
