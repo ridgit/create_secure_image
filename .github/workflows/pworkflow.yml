@@ -21,7 +21,7 @@ jobs:
         env:
           GITGUARDIAN_API_KEY: ${{ secrets.GITGUARDIAN_API_KEY }}
         with:
-          paths: "./functions/pythonmlmicroservice/"  # ✅ Chemin exact
+          paths: "./functions/data_engineering_challenge_th/"  # ✅ Chemin exact
 
   bandit-scan:
     name: Bandit Security Analysis
@@ -43,7 +43,7 @@ jobs:
       - name: Run Bandit Analysis
         run: |
           # Correction du chemin (ajout du 'r' manquant)
-          bandit -r functions/pythonmlmicroservice/ -ll -iii \
+          bandit -r functions/data_engineering_challenge_th/ -ll -iii \
             -f custom \
             --msg-template "{line}: {severity}: {test_id}: {msg}"
 
@@ -66,7 +66,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        working-directory: ./functions/pythonmlmicroservice
+        working-directory: ./functions/data_engineering_challenge_th
         run: |
           docker build -t ${{ secrets.MY_CONTAINER }}/secure-image:latest .
 
