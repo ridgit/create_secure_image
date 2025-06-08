@@ -1,0 +1,34 @@
+version: '3.8'
+services:
+  # ---------------------------------------------------------------------------
+  # Define the PostgreSQL service using the official postgres image.
+  # ---------------------------------------------------------------------------
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: oil_wells_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # ---------------------------------------------------------------------------
+  # Define the application service that runs the Python script.
+  # This service depends on the PostgreSQL service.
+  # ---------------------------------------------------------------------------
+  app:
+    build: .
+    depends_on:
+      - db
+    command: ["--input", "data/data.csv", "--output", "data/processed.csv", "--db_url", "postgresql://user:password@db:5432/oil_wells_db"]
+    volumes:
+      # Mount a local folder (./data) into the container at /data to share files.
+      - ./data:/data
+
+# -----------------------------------------------------------------------------
+# Define a Docker volume to persist PostgreSQL data.
+# -----------------------------------------------------------------------------
+volumes:
+  postgres_data:
