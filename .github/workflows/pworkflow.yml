@@ -21,7 +21,7 @@ jobs:
         env:
           GITGUARDIAN_API_KEY: ${{ secrets.GITGUARDIAN_API_KEY }}
         with:
-          paths: "./functions/etl_csv_to_db_demomain/"  # ✅ Chemin exact
+          paths: "./functions/etl_pipeline/"  # ✅ Chemin exact
 
   bandit-scan:
     name: Bandit Security Analysis
@@ -43,7 +43,7 @@ jobs:
       - name: Run Bandit Analysis
         run: |
           # Correction du chemin (ajout du 'r' manquant)
-          bandit -r functions/etl_csv_to_db_demomain/ -ll -iii \
+          bandit -r functions/etl_pipeline/ -ll -iii \
             -f custom \
             --msg-template "{line}: {severity}: {test_id}: {msg}"
 
@@ -66,7 +66,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        working-directory: ./functions/etl_csv_to_db_demomain
+        working-directory: ./functions/etl_pipeline
         run: |
           docker build -t ${{ secrets.MY_CONTAINER }}/secure-image:latest .
 
