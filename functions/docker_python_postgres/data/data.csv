@@ -1,0 +1,101 @@
+api10,direction,wellname,welltype,operator,basin,subbasin,state,county,spuddate,cum12moil,cum12mgas,cum12mwater
+4231745269,Horizontal,EAST CROSS BAR RANCH 0701WP,Oil,Occidental,Permian,Midland,Texas,Martin,2023-07-21,44697,111964,318840
+4203332586,Horizontal,WEREWOLF UNIT B 12-05 4AH,Oil,Surge Energy,Permian,Midland,Texas,Borden,2023-03-18,152764,97702,421361
+4203332607,Horizontal,FLUVANNA (MISSISSIPPIAN) UNIT 5182H,Oil,Browning Oil,Permian,Midland,Texas,Borden,2023-02-05,19097,22026,296459
+4203332615,Horizontal,YETI UNIT A 10-06 2AH,Oil,Surge Energy,Permian,Midland,Texas,Borden,2023-02-16,191900,164560,471164
+4203332616,Horizontal,WEREWOLF UNIT B 12-05 5AH,Oil,Surge Energy,Permian,Midland,Texas,Borden,2023-04-07,164095,128023,430897
+4203332617,Horizontal,WEREWOLF UNIT B 12-05 6AH,Oil,Surge Energy,Permian,Midland,Texas,Borden,2023-04-13,145061,110719,419366
+4203332618,Horizontal,ERLKING UNIT A 21-09 3AH,Oil,Surge Energy,Permian,Midland,Texas,Borden,2023-03-24,76829,63035,217811
+4203332619,Horizontal,ERLKING UNIT B 21-09 4AH,Oil,Surge Energy,Permian,Midland,Texas,Borden,2023-03-30,85739,82933,246292
+4203332632,Horizontal,MILLER RANCH B501MH,Oil,King Operating,Permian,Midland,Texas,Borden,2023-04-02,5711,2769,56120
+4200100536,Vertical,ROYALL NATIONAL BANK -B- 2,Oil,Pride Energy Company,Other,Other,Texas,Anderson,2023-05-29,386,0,0
+4237140394,Horizontal,ZAUK STATE 37-39 B 2WA,Oil,Diamondback,Permian,Delaware,Texas,Pecos,2023-01-06,152197,185703,922740
+4237140419,Horizontal,MAGNOLIA STATE UNIT 5001CH,Oil,Continental Resources,Permian,Delaware,Texas,Pecos,2023-01-08,173321,232997,422738
+4237140422,Horizontal,JOLLY JUMPER 48-21-28 2B3 303H,Oil,Exxon Mobil,Permian,Delaware,Texas,Pecos,2023-02-07,73385,52348,0
+4237140423,Horizontal,GUNPOWDER 48-21-16 2B3 303H,Oil,Exxon Mobil,Permian,Delaware,Texas,Pecos,2023-02-06,79866,49506,740544
+4237140424,Horizontal,GUNPOWDER 48-21-16 2B4 304H,Oil,Exxon Mobil,Permian,Delaware,Texas,Pecos,2023-02-05,103628,79035,268397
+4237140425,Horizontal,EL KABONG 48-17-8 303H,Oil,Exxon Mobil,Permian,Delaware,Texas,Pecos,2023-02-25,38043,19995,245658
+4237140426,Horizontal,SILVER 48-20-29 2B1 301H,Oil,Exxon Mobil,Permian,Delaware,Texas,Pecos,2023-01-11,79539,65976,996606
+4237140427,Horizontal,SILVER 48-20-29 2B2 302H,Oil,Exxon Mobil,Permian,Delaware,Texas,Pecos,2023-01-12,65642,26524,170013
+4237140428,Horizontal,SILVER 48-20-29 2B3 303H,Oil,Exxon Mobil,Permian,Delaware,Texas,Pecos,2023-02-22,63599,44986,164721
+4237140444,Horizontal,"BERRY, C. C. EST. 1A",Gas,Continental Resources,Permian,Delaware,Texas,Pecos,2033-03-03,115943,2773543,513539
+4237140445,Horizontal,ZAUK STATE 37-39 E 5TB,Oil,Diamondback,Permian,Delaware,Texas,Pecos,2023-01-11,195227,230912,719664
+4235300803,Vertical,"LITTLE, JESSIE 1",Oil,Scout Energy Partners,Permian,Eastern Shelf,Texas,Nolan,2023-03-12,3558,5472,0
+4210330625,Vertical,"COWDEN, JERRY 2",,Silver Cross Energy Partners,Permian,Central Basin Platform,Texas,Crane,2023-06-26,747,2240,15087
+4212335174,Horizontal,LACKEY-FRISBIE USW B 1,Oil,ConocoPhillips,Eagle Ford,Central Eagle Ford,Texas,DeWitt,2023-05-01,338665,922803,877142
+4212335201,Horizontal,ADAMS UNIT A 6,Oil,ConocoPhillips,Eagle Ford,Central Eagle Ford,Texas,DeWitt,2023-01-27,199267,604942,87739
+4212335202,Horizontal,ADAMS UNIT A 7,Oil,ConocoPhillips,Eagle Ford,Central Eagle Ford,Texas,DeWitt,2023-01-29,274820,799507,76396
+4212335203,Horizontal,ADAMS UNIT A 8,Oil,ConocoPhillips,Eagle Ford,Central Eagle Ford,Texas,DeWitt,2023-01-30,229769,661963,56379
+4212335204,Horizontal,ADAMS UNIT A 9,Oil,,Eagle Ford,Central Eagle Ford,Texas,DeWitt,2023-01-31,319361,818607,59618
+4212335229,Horizontal,SAGER 01-DUDERSTADT 01 SA1 01H,Gas,Marathon,Eagle Ford,Central Eagle Ford,Texas,DeWitt,2023-03-30,43500,2470567,2396451
+4212335230,Horizontal,SAGER 01-DUDERSTADT 01 SA2 02H,Gas,Marathon,Eagle Ford,Central Eagle Ford,Texas,DeWitt,2023-04-01,48068,2330628,2260708
+4212335231,Horizontal,SAGER 01 02H,Gas,Marathon,Eagle Ford,Central Eagle Ford,Texas,DeWitt,2023-03-18,72386,1889212,1832536
+4212335243,Horizontal,HOERMANN-KOLM 1H,Oil,Crescent Energy,Eagle Ford,Central Eagle Ford,Texas,DeWitt,2023-01-19,221008,496175,57477
+4212335244,Horizontal,HOERMANN-KOLM 201H,Oil,Crescent Energy,Eagle Ford,Central Eagle Ford,Texas,DeWitt,2023-01-19,83300,250323,323412
+4212335251,Vertical,BOEDEKER ETAL GU 3,Oil,Hurd Enterprises,Eagle Ford,Central Eagle Ford,Texas,DeWitt,2023-01-28,77841,609807,201607
+4212335278,Horizontal,HOERMANN-LANGHOFF B 1H,Oil,Crescent Energy,Eagle Ford,Central Eagle Ford,Texas,DeWitt,2023-05-18,158347,759449,108273
+4212335280,Horizontal,HOERMANN-LANGHOFF B 201H,Oil,Crescent Energy,Eagle Ford,Central Eagle Ford,Texas,DeWitt,2023-05-20,125076,668334,391018
+4212335302,Horizontal,HICKORY A 1H,Gas,Baytex Energy,Eagle Ford,Central Eagle Ford,Texas,DeWitt,2023-06-12,48324,1593841,1546025
+4212335303,Horizontal,HICKORY B 2H,Gas,Baytex Energy,Eagle Ford,Central Eagle Ford,Texas,DeWitt,2023-06-12,47133,1282478,1244004
+4203332614,Horizontal,YETI UNIT A 10-06 1AH,Oil,Surge Energy,Permian,Midland,Texas,Borden,2023-02-11,199148,149870,459943
+4203332635,Horizontal,SHAFER 32-12 B UNIT A 5H,Oil,Highpeak Energy,Permian,Midland,Texas,Borden,2023-04-29,74407,20031,565130
+4203332636,Horizontal,SHAFER 32-12 B UNIT L 5H,Oil,Highpeak Energy,Permian,Midland,Texas,Borden,2023-04-29,73803,20745,572110
+,Vertical,STEPHENS 1,Oil,S.B. Street Operating,Barnett,Barnett,Texas,Young,2023-03-07,21,1374,41189
+4250342541,Vertical,GRAHAM EST 2912 1,Oil,Stovall Operating,Barnett,Barnett,Texas,Young,2023-05-22,926,0,0
+4250342553,Vertical,MARSHALL 7,Oil,Walsh & Watts,Barnett,Barnett,Texas,Young,2023-08-28,12518,23380,12090
+4250342554,Vertical,CUSENBARY 2,Gas,Gannett Operating,Barnett,Barnett,Texas,Young,2023-08-03,0,105065,101913
+4231745680,Horizontal,MIDNIGHT MATADOR 12-24 B 2WD,Oil,Birch Resources,Permian,Midland,Texas,Martin,2023-12-28,622,119501,1611
+4227580366,Vertical,"ROBERTS, S. C. 1",Oil,Older Than Dirt,Barnett,Barnett,Texas,Knox,2023-05-12,27,0,242
+4210330480,Vertical,WADDELL TR 3 1105,Oil,Blackbeard,Permian,Central Basin Platform,Texas,Crane,2023-05-19,4559,6005,42672
+4210332303,Vertical,WADDELL TR 3 1117A,Oil,Blackbeard,Permian,Central Basin Platform,Texas,Crane,2023-05-05,17920,17573,36634
+4239532073,Horizontal,MCCULLOUGH INGRAM A 1H,Gas,Comstock,Eagle Ford,Northeastern Eagle Ford,Texas,Robertson,2023-01-21,0,8865099,8599147
+4239532089,Horizontal,PALE RIDER 1HA,Oil,Magnolia Oil & Gas,Eagle Ford,Northeastern Eagle Ford,Texas,Robertson,2023-03-02,179626,193832,444005
+4239903686,Vertical,FENNELL 'A' 609,Oil,Cedar Oil,Permian,Eastern Shelf,Texas,Runnels,2023-02-23,180,0,21797
+4201335907,Horizontal,EMMA TARTT D 29H,Oil,Exxon Mobil,Eagle Ford,Central Eagle Ford,Texas,Atascosa,2023-01-28,109611,133766,175507
+4201335938,Horizontal,ASE SOUTH A333SD,Oil,Arrow S Energy,Eagle Ford,Central Eagle Ford,Texas,Atascosa,2023-04-04,101376,33994,116752
+4201335939,Horizontal,ASE SOUTH A311SD,Oil,Arrow S Energy,Eagle Ford,Central Eagle Ford,Texas,Atascosa,2023-04-01,98535,34380,135746
+4201335942,Horizontal,ASE SOUTH A322SD,,Arrow S Energy,15,Central Eagle Ford,Texas,Atascosa,2023-04-01,84790,35563,117483
+4201335962,Horizontal,MIDDLE MCCOWEN 312H,Oil,Marathon,Eagle Ford,Central Eagle Ford,Texas,Atascosa,2023-01-07,139017,104608,211606
+4201335963,Horizontal,MIDDLE MCCOWEN 113H,Oil,Marathon,Eagle Ford,Central Eagle Ford,Texas,Atascosa,2023-01-06,144087,,285631
+4201335972,Horizontal,POTH A 2H,Oil,Pillar Energy,Eagle Ford,Central Eagle Ford,Texas,Atascosa,2023-01-08,104462,120130,235491
+4201335975,Horizontal,WYE-WARREN A 02H,Oil,Crescent Energy,Eagle Ford,Central Eagle Ford,Texas,Atascosa,2023-01-13,115630,55253,141364
+4201335978,Horizontal,RETZLOFF MAY-MAUCH KRUEGER SA 1H,Oil,Marathon,Eagle Ford,Central Eagle Ford,Texas,Atascosa,2023-01-09,102718,158410,80504
+4201335979,Horizontal,BOWMAN WEST K335,Oil,Crescent Energy,Eagle Ford,Maverick Basin,Texas,Atascosa,2023-01-12,64391,49798,138302
+4201335980,Horizontal,BOWMAN WEST K336,Oil,Crescent Energy,Eagle Ford,Maverick Basin,Texas,Atascosa,2023-01-10,68263,44634,117995
+4201335983,Horizontal,BOWMAN WEST J332,Oil,Crescent Energy,Eagle Ford,Maverick Basin,Texas,Atascosa,2023-01-29,52227,21993,189116
+4201335984,Horizontal,FOREIGNER 19H,Oil,Trinity Operating,Eagle Ford,Central Eagle Ford,Texas,Atascosa,2023-01-23,66306,23446,263792
+4201335986,Horizontal,FOREIGNER 21H,Oil,Trinity Operating,Eagle Ford,Central Eagle Ford,Texas,Atascosa,2023-01-20,61684,15538,110397
+4201335989,Horizontal,THE EAGLES 17H,Oil,Trinity Operating,Eagle Ford,Central Eagle Ford,Texas,Atascosa,2023-02-18,87241,32687,260477
+4201335991,Horizontal,PEARCE 6H,Oil,Valence Operating,Eagle Ford,Maverick Basin,Texas,Atascosa,2023-02-15,105597,14014,135771
+4201336001,Horizontal,DAVY CROCKETT A 1H,Oil,EOG,Eagle Ford,Maverick Basin,Texas,Atascosa,2023-04-18,193129,144199,232030
+4201336002,Horizontal,DAVY CROCKETT B 2H,Oil,EOG,Eagle Ford,Maverick Basin,Texas,Atascosa,2023-04-19,196753,147887,407087
+4201336003,Horizontal,DAVY CROCKETT C 3H,Oil,EOG,Eagle Ford,Maverick Basin,Texas,Atascosa,2023-04-20,199472,156523,432900
+4201336004,Horizontal,DAVY CROCKETT D 4H,Oil,EOG,Eagle Ford,Maverick Basin,Texas,Atascosa,2023-04-21,177770,140211,393029
+4201336008,Horizontal,DAVY CROCKETT H 8H,Oil,EOG,Eagle Ford,Maverick Basin,Texas,Atascosa,2023-04-17,104572,73485,290038
+4201336012,Horizontal,TOM-KOWALIK B ALLOC 2H,Oil,Verdun,Eagle Ford,Central Eagle Ford,Texas,Atascosa,2023-09-01,172929,167041,447887
+4239332756,Horizontal,BWL 651H,Oil,Latigo Petroleum,Anadarko,Granite Wash,Texas,Roberts,2023-01-17,seventeen,103994,31458
+4239332767,Horizontal,SCP 419 4H,Oil,Latigo Petroleum,Anadarko,Granite Wash,Texas,Roberts,2023-02-19,15691,33861,48815
+4239332770,Horizontal,SCP 619 6H,Oil,Latigo Petroleum,Anadarko,Granite Wash,Texas,Roberts,2023-04-03,10231,22495,48146
+4232132444,Vertical,BUNK 1,Gas,Ponderosa Oil & Gas,Other,Other,Texas,Matagorda,2023-01-19,2154,159236,154459
+4250137183,Horizontal,WISHBONE FARMS 710 4H,Oil,Ring Energy,Permian,Northwest Shelf,Texas,Yoakum,2023-07-11,88928,78886,310065
+4239133272,Vertical,MEOC-MELLON-STATE UNIT 3,Gas,TC Oil,Other,Other,Texas,Refugio,2023-02-18,31361,132038,
+4239133279,Vertical,"WILLIAMS, MAUDE, ETAL -A- D218",Oil,Hilcorp Energy,Other,Other,Texas,Refugio,2023-01-08,24833,1592,127491
+4239133280,Vertical,"WILLIAMS, MAUDE, ETAL -A- D220",Oil,Hilcorp Energy,Other,Other,Texas,Refugio,2023-02-10,20573,31952,49482
+4239133283,Vertical,"WILLIAMS, MAUDE, ETAL -A- D221",Oil,Hilcorp Energy,Other,Other,Texas,Refugio,2023-02-07,13445,26510,260221
+4239133289,Vertical,T-C OIL CO.-OCONNOR 114,Oil,TC Oil,Other,Other,Texas,Refugio,2023-01-02,6849,2720,40478
+4239133292,Vertical,"WILLIAMS, MAUDE, ETAL -A- D223",Oil,Hilcorp Energy,Other,2023-01-13,Texas,Refugio,2023-01-13,12732,8126,77180
+4239133296,Vertical,"OCONNOR, DENNIS, ETAL -L- L 97",Oil,TC Oil,Other,Other,Texas,Refugio,2023-03-14,1958,2153,23762
+4239133298,Vertical,M. F. LAMBERT 301,Oil,Hilcorp Energy,Other,Other,Texas,Refugio,2023-03-12,2209,86,357696
+4239133300,Vertical,"OCONNOR, DENNIS, ETAL -L- L 98",Oil,TC Oil,Other,Other,Texas,Refugio,2023-04-03,766,60,10233
+4239133302,Vertical,T-C OIL CO.-OCONNOR 117,Oil,TC Oil,Other,Other,Texas,Refugio,2023-04-28,1206,1350,26975
+4239133303,Vertical,T-C OIL CO.-OCONNOR 118,Oil,TC Oil,Other,Other,Texas,Refugio,2023-04-18,24255,2630,3384
+,Vertical,T-C OIL CO.-OCONNOR 120,Oil,TC Oil,Other,Other,Texas,Refugio,2023-06-11,13961,1563,12322
+4239133308,Vertical,T-C OIL CO.-OCONNOR 122,Oil,TC Oil,Other,Other,Texas,Refugio,2023-07-10,14175,1876,11513
+4239133315,Vertical,T-C OIL CO.-OCONNOR 123,Oil,TC Oil,Other,Other,Texas,Refugio,2023-07-19,882,113,30153
+4209734799,Vertical,COOKE 24,Oil,Wfw Production,Anadarko,SCOOP,Texas,Cooke,2023-05-22,3962,0,8427
+4209734801,Vertical,THS UNIT 7,Oil,"Miller, Glenn J.",Barnett,Barnett,Texas,Cooke,2023-05-20,1090,0,3815
+4209734802,Vertical,"TRUBENBACH, J. F. -A- 30",Oil,Wfw Production,Barnett,Barnett,Texas,Cooke,2023-05-31,2158,0,0
+4209734803,Vertical,BELL 15,Oil,Reed Production,Barnett,Barnett,Texas,Cooke,2023-06-27,11607,0,6276
+4209734806,Vertical,"TRUBENBACH, J. F. -A- 32",Oil,Wfw Production,Barnett,Barnett,Texas,Cooke,2023-09-05,1662,0,0
+4212335200,Horizontal,ADAMS UNIT A 5,Oil,ConocoPhillips,Eagle Ford,Central Eagle Ford,Texas,DeWitt,2023-01-26,230263,665269,113787
+4212335252,Vertical,R4 PARTNERS 1,Gas,Kaler Energy,Eagle Ford,Central Eagle Ford,Texas,DeWitt,2023-03-04,45927,437322,118949
